@@ -13,4 +13,6 @@ function logando(event) {
   event.preventDefault();
   window.location = "perfil.html";
 }
-formLogin.addEventListener("submit", logando);
+if (formLogin) {
+  formLogin.addEventListener("submit", logando);
+}

@@ -491,6 +491,7 @@ button {
   height: 70px;
   top: 0;
   left: 0;
+  z-index: 9999;
   background-color: #5c9ecf;
   display: flex;
   justify-content: space-between;
@@ -587,7 +588,7 @@ button {
   display: none;
   background-color: #5c9ecf;
   z-index: 9999;
-  width: 40vw;
+  max-width: 60vw;
   padding: 20px 5px;
   flex-direction: column;
   gap: 15px;
@@ -602,6 +603,7 @@ button {
   align-items: center;
   background-color: rgba(0, 0, 0, 0.3);
   border-radius: 15px;
+  padding: 0 10px;
 }
 
 .menu-mobile-opcoes img {
@@ -692,7 +694,7 @@ button {
 .dados {
   margin-top: 100px;
   width: 100%;
-  max-height: 75vh;
+  max-height: 80vh;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -746,15 +748,24 @@ button {
 }
 
 .dados-lista {
-  margin-top: 20px;
+  margin-top: 5px;
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  justify-content: space-between;
+  height: 100%;
+  gap: 8px;
 }
 
 .dados-lista img {
-  max-width: 20px;
+  max-width: 25px;
   margin-bottom: 0px;
+  border-radius: 0;
+}
+
+@media (max-width: 767px) {
+  .dados-lista img {
+    max-width: 20px;
+  }
 }
 
 .dados-lista a {
@@ -767,6 +778,10 @@ button {
   border-radius: 5px;
   color: #115182;
   font-size: 1.2rem;
+}
+
+.dados-lista a:hover {
+  transform: scale(1.05);
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
@@ -812,12 +827,6 @@ button {
   }
 }
 
-@media (max-width: 767px) {
-  .descricao-titulo {
-    text-align: center;
-  }
-}
-
 .descricao-listas {
   border-top: 1px solid #e4e4e4;
   border-bottom: 1px solid #e4e4e4;
@@ -825,13 +834,6 @@ button {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-}
-
-@media (max-width: 767px) {
-  .descricao-listas {
-    align-items: center;
-    flex-direction: column;
-  }
 }
 
 .descricao-listas .descrica-lista-1 {
@@ -863,6 +865,7 @@ button {
 }
 
 .descricao-listas .descrica-lista-1 img {
+  margin-top: 2px;
   max-width: 18px;
   grid-row: 2;
 }
@@ -911,13 +914,14 @@ button {
 }
 
 .descricao-listas .descrica-lista-2 img {
-  max-width: 18px;
+  margin-top: 2px;
+  max-width: 50px;
   grid-row: 2;
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
   .descricao-listas .descrica-lista-2 img {
-    max-width: 15px;
+    max-width: 50px;
   }
 }
 
@@ -1042,6 +1046,10 @@ button {
   padding: 10px;
 }
 
+.amigos-comunidades li:hover {
+  transform: scale(1.05);
+}
+
 @media (min-width: 768px) and (max-width: 1199px) {
   .amigos-comunidades li {
     padding: 5px;
@@ -1086,7 +1094,7 @@ button {
 
 .menu-hamburguer {
   position: absolute;
-  top: -15px;
+  top: -10px;
   left: -10px;
 }
 
@@ -1100,8 +1108,8 @@ button {
 }
 
 .checkbox .trace {
-  width: 60px;
-  height: 8px;
+  width: 50px;
+  height: 6px;
   background-color: white;
   position: absolute;
   border-radius: 4px;
@@ -1114,12 +1122,12 @@ button {
 }
 
 .checkbox .trace:nth-child(2) {
-  top: 46px;
+  top: 41px;
   transform: rotate(0);
 }
 
 .checkbox .trace:nth-child(3) {
-  top: 66px;
+  top: 56px;
   transform: rotate(0);
 }
 

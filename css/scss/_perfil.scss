@@ -26,6 +26,7 @@
   height: 70px;
   top: 0;
   left: 0;
+  z-index: 9999;
   background-color: $header-perfil;
   display: flex;
   justify-content: space-between;
@@ -99,7 +100,7 @@
   display: none;
   background-color: $header-perfil;
   z-index: 9999;
-  width: 40vw;
+  max-width: 60vw;
   padding: 20px 5px;
   flex-direction: column;
   gap: 15px;
@@ -112,6 +113,7 @@
     align-items: center;
     background-color: rgba(0, 0, 0, 0.3);
     border-radius: 15px;
+    padding: 0 10px;
   }
   img {
     max-width: 40px;
@@ -184,7 +186,7 @@
 .dados {
   margin-top: 100px;
   width: 100%;
-  max-height: 75vh;
+  max-height: 80vh;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -228,13 +230,19 @@
   }
 }
 .dados-lista {
-  margin-top: 20px;
+  margin-top: 5px;
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  justify-content: space-between;
+  height: 100%;
+  gap: 8px;
   img {
-    max-width: 20px;
+    max-width: 25px;
     margin-bottom: 0px;
+    border-radius: 0;
+    @include d(m) {
+      max-width: 20px;
+    }
   }
   a {
     display: flex;
@@ -246,6 +254,9 @@
     border-radius: 5px;
     color: $fonte-clicavel;
     font-size: 1.2rem;
+    &:hover {
+      transform: scale(1.05);
+    }
     @include d(t) {
       font-size: 0.8rem;
     }
@@ -279,9 +290,6 @@
   @include d(t) {
     font-size: 2rem;
   }
-  @include d(m) {
-    text-align: center;
-  }
 }
 .descricao-listas {
   border-top: 1px solid $listras;
@@ -290,10 +298,6 @@
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  @include d(m) {
-    align-items: center;
-    flex-direction: column;
-  }
   .descrica-lista-1 {
     display: flex;
     gap: 20px;
@@ -313,6 +317,7 @@
       }
     }
     img {
+      margin-top: 2px;
       max-width: 18px;
       grid-row: 2;
       @include d(t) {
@@ -345,10 +350,11 @@
       }
     }
     img {
-      max-width: 18px;
+      margin-top: 2px;
+      max-width: 50px;
       grid-row: 2;
       @include d(t) {
-        max-width: 15px;
+        max-width: 50px;
       }
     }
     .lista-numeros {
@@ -447,6 +453,9 @@
     font-size: 0.7rem;
     max-width: 140px;
     padding: 10px;
+    &:hover {
+      transform: scale(1.05);
+    }
     @include d(t) {
       padding: 5px;
       min-width: 130px;
@@ -487,7 +496,7 @@
 // MENU HAMBURGUER
 .menu-hamburguer {
   position: absolute;
-  top: -15px;
+  top: -10px;
   left: -10px;
 }
 .checkbox {
@@ -500,8 +509,8 @@
 }
 
 .checkbox .trace {
-  width: 60px;
-  height: 8px;
+  width: 50px;
+  height: 6px;
   background-color: white;
   position: absolute;
   border-radius: 4px;
@@ -514,12 +523,12 @@
 }
 
 .checkbox .trace:nth-child(2) {
-  top: 46px;
+  top: 41px;
   transform: rotate(0);
 }
 
 .checkbox .trace:nth-child(3) {
-  top: 66px;
+  top: 56px;
   transform: rotate(0);
 }
 
