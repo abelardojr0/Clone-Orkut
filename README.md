@@ -20,14 +20,7 @@ Projeto 100% responsivo!
 ![orkut-mobile](https://user-images.githubusercontent.com/106066785/209384588-2604f47a-d60c-41cb-84ea-6104ca075114.png)
 ![orkut-perfil-mobile](https://user-images.githubusercontent.com/106066785/209384594-ac4d834a-3523-44a0-beed-5e5cdfb3e5f6.png)
 
-
-# :hammer: Funcionalidades do Projeto
-
-- `Funcionalidade 1`: Controle de Dados
-- `Funcionalidade 2`: Gestão de Login
-- `Funcionalidade 3`: Rede Social
-
-# :pushpin: Projeto em Execução
+# :hammer: Projeto em Execução
 
 https://user-images.githubusercontent.com/106066785/209385467-837dc2e9-a6ae-4425-b322-00460e1e392d.mp4
 
